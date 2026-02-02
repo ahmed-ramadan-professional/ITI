@@ -1,0 +1,37 @@
+* {
+    box-sizing: border-box;
+}
+table {
+    table-layout: fixed; /* Ensures fixed column widths */
+    width: 100%; /* Or a specific pixel width, e.g., 500px */
+}
+th {
+    cursor: pointer;
+    background-color: rgb(207, 207, 207);
+}
+
+.desc:after {
+    content: ' ▼';
+}
+
+.asc:after {
+    content: ' ▲';
+}
+.inactive:after {
+    content: ' ▲';
+    color: gray;
+    opacity: 0.5;
+}
+
+.perPageSelect {
+    width: 80px;
+}
+
+.editInput {
+    width: 10%;
+}
+
+.required::placeholder {
+    color: red;
+    opacity: .8; 
+}
