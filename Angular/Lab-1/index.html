@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+            crossorigin="anonymous" />
+        <link rel="stylesheet" href="style.css" />
+        <title>Document</title>
+    </head>
+    <body>
+        <div class="container">
+            <form id="form" class="form">
+                <div class="row mb-3">
+                    <div class="input-group mb-3">
+                        <span class="input-group-text" id="basic-addon1"
+                            >Email</span
+                        >
+                        <input
+                            id="email"
+                            type="text"
+                            class="form-control"
+                            placeholder="email@example.com"
+                            aria-label="Username"
+                            aria-describedby="basic-addon1" />
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="input-group mb-3">
+                        <span class="input-group-text" id="basic-addon1"
+                            >Password</span
+                        >
+                        <input
+                            id="password"
+                            type="text"
+                            class="form-control"
+                            placeholder="***"
+                            aria-label="password"
+                            aria-describedby="basic-addon1" />
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-primary w-100">
+                    Login
+                </button>
+            </form>
+            <form id="game" class="form game" style="display: none">
+                <span id="progress">1/5</span>
+
+                <div class="row mb-3">
+                    <div class="input-group mb-3">
+                        <span class="input-group-text" id="questionInfo"
+                            >1 + 1 = ?</span
+                        >
+                        <input
+                            id="answer"
+                            type="text"
+                            class="form-control"
+                            placeholder="..."
+                            aria-label="password"
+                            aria-describedby="questionInfo" />
+                    </div>
+                </div>
+
+                <button id="next" type="submit" class="btn btn-primary w-100">
+                    Next
+                </button>
+            </form>
+            <form id="end" class="form end" style="display: none">
+                <span>Congratulations!</span>
+
+                <button id="next" type="submit" class="btn btn-primary w-100">
+                    Start Over
+                </button>
+            </form>
+        </div>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+            crossorigin="anonymous"></script>
+        <script src="index.js"></script>
+    </body>
+</html>
