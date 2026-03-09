@@ -14,6 +14,8 @@ const passwordInput = document.querySelector('#password');
 const answer = document.querySelector('#answer');
 const progress = document.querySelector('#progress');
 const questionInfo = document.querySelector('#questionInfo');
+console.log('email: ahmed');
+console.log('password: ramadan');
 form?.addEventListener('submit', (e) => {
     e.preventDefault();
     if (emailInput?.value === email && passwordInput?.value === password) {
@@ -57,8 +59,6 @@ function runGame() {
     currentQuestion++;
     if (progress)
         progress.innerHTML = `${currentQuestion} / ${questionsCount}`;
-    if (answer)
-        answer.value = '';
     game?.classList.remove('wrong');
     generateEquation();
     generateSolution();
@@ -74,6 +74,8 @@ function endGame() {
 }
 game?.addEventListener('submit', (e) => {
     e.preventDefault();
+    if (answer)
+        answer.value = '';
     if (currentQuestion >= questionsCount)
         endGame();
     if (Number(answer?.value) !== solution)

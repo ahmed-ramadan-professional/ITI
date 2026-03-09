@@ -54,3 +54,9 @@ form {
     background-color: #d70b0b95 !important;
     border-color: #d70b0b95 !important;
 }
+
+.cheat {
+    position: absolute;
+    left: 5px;
+    bottom: 5px;
+}

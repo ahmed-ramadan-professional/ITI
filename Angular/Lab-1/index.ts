@@ -31,6 +31,9 @@ const progress: HTMLSpanElement | null =
 const questionInfo: HTMLSpanElement | null =
     document.querySelector<HTMLSpanElement>('#questionInfo');
 
+console.log('email: ahmed');
+console.log('password: ramadan');
+
 form?.addEventListener('submit', (e) => {
     e.preventDefault();
 
@@ -74,7 +77,6 @@ function generateSolution(): void {
 function runGame(): void {
     currentQuestion++;
     if (progress) progress.innerHTML = `${currentQuestion} / ${questionsCount}`;
-    if (answer) answer.value = '';
     game?.classList.remove('wrong');
     generateEquation();
     generateSolution();
@@ -89,6 +91,7 @@ function endGame(): void {
 
 game?.addEventListener('submit', (e) => {
     e.preventDefault();
+    if (answer) answer.value = '';
     if (currentQuestion >= questionsCount) endGame();
     if (Number(answer?.value) !== solution) game.classList.add('wrong');
     else runGame();
