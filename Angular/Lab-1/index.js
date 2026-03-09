@@ -74,12 +74,12 @@ function endGame() {
 }
 game?.addEventListener('submit', (e) => {
     e.preventDefault();
-    if (answer)
-        answer.value = '';
     if (currentQuestion >= questionsCount)
         endGame();
     if (Number(answer?.value) !== solution)
         game.classList.add('wrong');
     else
         runGame();
+    if (answer)
+        answer.value = '';
 });
