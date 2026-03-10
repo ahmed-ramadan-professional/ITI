@@ -1,4 +1,4 @@
-# Angular Lab 1
+# Angular Lab 2
 
 ## Links
 
