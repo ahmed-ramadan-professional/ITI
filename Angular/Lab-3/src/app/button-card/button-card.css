@@ -1,0 +1,17 @@
+.button-card {
+  background: rgba(255, 255, 255, 0.301);
+  backdrop-filter: blur(10px);
+  background: url('/background.png');
+  padding: 8px;
+  border-radius: 12px;
+}
+
+.button-card button {
+  width: fit-content;
+  white-space: nowrap;
+  border-radius: 7px;
+}
+
+.button-card span {
+  padding: 8px 30px;
+}

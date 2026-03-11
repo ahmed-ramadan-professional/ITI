@@ -1,0 +1,116 @@
+.parent-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.parent-card {
+  position: relative;
+  width: 420px;
+  padding: 30px;
+  background: #1f2933;
+  color: white;
+  border-radius: 15px;
+  text-align: center;
+}
+
+.chains {
+  position: absolute;
+  top: 90%;
+  width: 100%;
+  height: 60px;
+}
+
+.chain {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  font-size: 18px;
+  color: #cbd5e1;
+  z-index: -1;
+}
+
+.chain.left {
+  left: 35%;
+}
+
+.chain.right {
+  right: 35%;
+  height: 70px;
+  overflow: hidden;
+}
+
+.child-card {
+  position: absolute;
+  backdrop-filter: blur(10px);
+  top: calc(100% + 70px);
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+
+.dangling {
+  animation: swing 3s ease-in-out infinite;
+  transform-origin: top center;
+}
+
+@keyframes swing {
+  0% {
+    transform: translateX(-50%) rotate(-5deg);
+  }
+
+  50% {
+    transform: translateX(-50%) rotate(5deg);
+  }
+
+  100% {
+    transform: translateX(-50%) rotate(-5deg);
+  }
+}
+.dangling2 {
+  animation: swing2 3s ease-in-out infinite;
+  transform-origin: top center;
+}
+
+@keyframes swing2 {
+  0% {
+    transform: translateX(-55%) rotate(20deg);
+  }
+
+  50% {
+    transform: translateX(-60%) rotate(25deg);
+  }
+
+  100% {
+    transform: translateX(-55%) rotate(20deg);
+  }
+}
+.dangling3 {
+  animation: swing3 3s ease-in-out infinite;
+  transform-origin: top center;
+}
+
+@keyframes swing3 {
+  0% {
+    transform: translateX(-50%) rotate(2deg);
+  }
+
+  50% {
+    transform: translateX(-50%) rotate(-2deg);
+  }
+
+  100% {
+    transform: translateX(-50%) rotate(2deg);
+  }
+}
+.drop {
+  transition: all 1s ease-in-out ;
+  transform: translateY(1133px) !important;
+}
+
+.dropped {
+  opacity: 0;
+  height: 0;
+}
