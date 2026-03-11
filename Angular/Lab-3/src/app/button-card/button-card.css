@@ -1,7 +1,7 @@
 .button-card {
   background: rgba(255, 255, 255, 0.301);
   backdrop-filter: blur(10px);
-  background: url('background.png');
+  background: url('/ITI/Angular/Lab-3/dist/Lab-3/browser/background.png');
   padding: 8px;
   border-radius: 12px;
 }
