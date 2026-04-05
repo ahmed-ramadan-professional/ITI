@@ -4,7 +4,7 @@ A modern and responsive task management app built with **React + Vite + Tailwind
 Includes task creation, completion tracking, filtering, and detailed views with smooth hover effects and styled notifications using **React-Toastify**.
 
 [![Repository](https://img.shields.io/badge/Repository-GitHub-181717?logo=github)](https://github.com/ahmed-ramadan-professional/ITI/React/Lab-2)
-[![Live Demo](https://img.shields.io/badge/Live%20Demo-Github%20Pages-brightgreen)](https://ahmed-ramadan-professional.github.io/ITI/React/Lab-2/dist/index.html)
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Github%20Pages-brightgreen)](https://ahmed-ramadan-professional.github.io/ITI/React/Lab-2/dist/)
 
 ![Project Screenshot](./image.png)
 ![Project Screenshot](./image-2.png)
