@@ -3,7 +3,7 @@
 > A modern, fully-featured task management app with authentication, built using **React + Vite + Tailwind CSS**
 
 <p >
-  <a href="https://github.com/ahmed-ramadan-professional/ITI/React/Lab-3">
+  <a href="https://github.com/ahmed-ramadan-professional/ITI/tree/main/React/Lab-3">
     <img src="https://img.shields.io/badge/Repo-GitHub-181717?logo=github" />
   </a>
   <a href="https://ahmed-ramadan-professional.github.io/ITI/React/Lab-3/dist/">
@@ -122,7 +122,7 @@ src/
 ## Installation
 
 ```bash
-git clone https://github.com/ahmed-ramadan-professional/ITI/React/Lab-3.git
+git clone https://github.com/ahmed-ramadan-professional/ITI.git
 cd ITI/React/Lab-3
 npm install
 npm run dev
