@@ -1,0 +1,15 @@
+<section class="custom-card panel-card h-100">
+  <h2 class="mb-3">Component 2</h2>
+  <p>This component reads the same data from the service.</p>
+  <p><strong>Total items:</strong> {{ sharedItems.length }}</p>
+
+  <ul class="list-group simple-list" *ngIf="sharedItems.length; else noItems">
+    <li class="list-group-item" *ngFor="let item of sharedItems">
+      {{ item }}
+    </li>
+  </ul>
+
+  <ng-template #noItems>
+    <p class="mb-0">No items found.</p>
+  </ng-template>
+</section>

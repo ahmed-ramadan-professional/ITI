@@ -1,0 +1,30 @@
+.panel-card {
+  height: 100%;
+}
+
+.form-control {
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.12);
+  color: white;
+}
+
+.form-control::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.form-control:focus {
+  color: white;
+  background: rgba(255, 255, 255, 0.18);
+  border-color: rgba(155, 218, 241, 0.8);
+  box-shadow: 0 0 0 0.2rem rgba(155, 218, 241, 0.2);
+}
+
+.simple-list,
+.simple-list .list-group-item {
+  background: transparent;
+  color: white;
+}
+
+.simple-list .list-group-item {
+  border-color: rgba(255, 255, 255, 0.15);
+}

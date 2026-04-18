@@ -1,0 +1,27 @@
+<section class="custom-card panel-card h-100">
+  <h2 class="mb-3">Component 1</h2>
+  <p>Add a new item to the shared service.</p>
+
+  <label for="itemInput" class="form-label">New item</label>
+  <input
+    id="itemInput"
+    type="text"
+    class="form-control"
+    [(ngModel)]="draftItem"
+    placeholder="Enter item"
+    (keyup.enter)="addItem()"
+  />
+
+  <button type="button" class="btn btn-primary mt-3" (click)="addItem()">Add Item</button>
+
+  <h5 class="mt-4">Current Items</h5>
+  <ul class="list-group simple-list" *ngIf="sharedItems.length; else noItems">
+    <li class="list-group-item" *ngFor="let item of sharedItems">
+      {{ item }}
+    </li>
+  </ul>
+
+  <ng-template #noItems>
+    <p class="mt-3 mb-0">No items yet.</p>
+  </ng-template>
+</section>
