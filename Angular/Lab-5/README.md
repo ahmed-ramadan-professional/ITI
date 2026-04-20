@@ -8,6 +8,10 @@ Student Management System built with Angular standalone components, routing, sha
 [![Repository](https://img.shields.io/badge/Repository-GitHub-181717?logo=github)](https://github.com/ahmed-ramadan-professional/ITI/tree/main/Angular/Lab-5)
 [![Live Demo](https://img.shields.io/badge/Live%20Demo-Github%20Pages-brightgreen)](https://ahmed-ramadan-professional.github.io/ITI/Angular/Lab-5/dist/Lab-5/browser/index.html)
 
+![Home Page](screenshots/image.png)
+![Students Page](screenshots/image_2.png)
+![Students Page](screenshots/image_3.png)
+
 ## Overview
 
 This project is a small Student Management System built with Angular to manage student records through a clean single-page experience. The application allows users to view students, inspect detailed records, add new students, update existing records, delete records, and work with filtered or searched results.
