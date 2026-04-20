@@ -1,0 +1,66 @@
+h1,
+p {
+  color: white;
+}
+
+.section-subtitle {
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.page-actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.student-summary,
+.results-row {
+  display: flex;
+  align-items: center;
+}
+
+.summary-badge,
+.results-text {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: rgba(255, 255, 255, 0.92);
+  font-size: 0.92rem;
+}
+
+.filter-panel {
+  padding: 1rem;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.table-filter-label {
+  color: white;
+}
+
+.form-control,
+.form-select {
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.12);
+  color: white;
+}
+
+.form-control::placeholder {
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.form-control:focus,
+.form-select:focus {
+  color: white;
+  background: rgba(255, 255, 255, 0.18);
+  border-color: rgba(155, 218, 241, 0.8);
+  box-shadow: 0 0 0 0.2rem rgba(155, 218, 241, 0.2);
+}
+
+.form-select option {
+  color: black;
+}

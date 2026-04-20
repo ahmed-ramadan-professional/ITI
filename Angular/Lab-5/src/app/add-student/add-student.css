@@ -1,0 +1,64 @@
+h1,
+p,
+label,
+.form-check-label {
+  color: white;
+}
+
+.section-subtitle {
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.form-section-title {
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  color: #d7edf7;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+}
+
+.section-break {
+  margin-top: 1rem;
+}
+
+.form-control,
+.form-select {
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.12);
+  color: white;
+}
+
+.form-control:focus,
+.form-select:focus {
+  color: white;
+  background: rgba(255, 255, 255, 0.18);
+  border-color: rgba(155, 218, 241, 0.8);
+  box-shadow: 0 0 0 0.2rem rgba(155, 218, 241, 0.2);
+}
+
+.form-select option {
+  color: black;
+}
+
+.form-check-input {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.25);
+}
+
+.field-error {
+  display: block;
+  margin-top: 0.35rem;
+  color: #ffd7a8;
+}
+
+.action-bar {
+  margin-top: 1.25rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.action-submit {
+  min-width: 160px;
+}

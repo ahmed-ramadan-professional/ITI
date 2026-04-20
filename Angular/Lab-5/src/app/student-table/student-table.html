@@ -1,0 +1,60 @@
+<div class="table-responsive" *ngIf="students.length; else emptyState">
+  <table class="table custom-table align-middle mb-0">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th class="text-center">Age</th>
+        <th class="text-center">Gender</th>
+        <th>Department</th>
+        <th class="text-center">GPA</th>
+        <th class="text-center">Status</th>
+        <th class="text-center">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let student of students; trackBy: trackByStudentId">
+        <td>{{ student.id }}</td>
+        <td>{{ student.firstName }} {{ student.lastName }}</td>
+        <td class="text-center">{{ student.age }}</td>
+        <td class="text-center">{{ student.gender }}</td>
+        <td>{{ student.department }}</td>
+        <td class="text-center">{{ student.gpa }}</td>
+        <td class="text-center">
+          <span class="table-status-badge" [class.table-status-badge-inactive]="!student.isActive">
+            {{ student.isActive ? 'Active' : 'Inactive' }}
+          </span>
+        </td>
+        <td class="actions-cell">
+          <div class="d-flex flex-wrap justify-content-center gap-2">
+            <button type="button" class="btn btn-sm btn-light" (click)="viewStudent.emit(student.id)">
+              View
+            </button>
+            <button
+              type="button"
+              class="btn btn-sm btn-outline-light"
+              (click)="editStudent.emit(student.id)"
+            >
+              Edit
+            </button>
+            <button
+              type="button"
+              class="btn btn-sm btn-outline-danger"
+              (click)="deleteStudent.emit(student.id)"
+            >
+              Delete
+            </button>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<ng-template #emptyState>
+  <div class="empty-state">
+    <div class="empty-state-icon">^_^</div>
+    <p class="mb-2">{{ hasActiveFilters ? 'No students match the current search or department filter.' : 'No students available.' }}</p>
+    <small class="empty-state-hint" *ngIf="hasActiveFilters">Try clearing filters or changing the search text.</small>
+  </div>
+</ng-template>

@@ -1,0 +1,122 @@
+body {
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  min-height: 100vh;
+  overflow-x: hidden;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-attachment: fixed;
+}
+
+.custom-card {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 30px;
+  color: white;
+  text-align: center;
+  transition: all 0.35s ease;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.custom-card p {
+  text-align: justify;
+}
+
+.btn {
+  border-radius: 10px;
+}
+
+.btn-primary {
+  background: rgba(255, 255, 255, 0.16);
+  border-color: rgba(255, 255, 255, 0.28);
+  color: white;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active {
+  background: rgba(255, 255, 255, 0.24) !important;
+  border-color: rgba(255, 255, 255, 0.34) !important;
+  color: white !important;
+  box-shadow: none !important;
+}
+
+.btn-primary:disabled,
+.btn-primary.disabled {
+  background: rgba(255, 255, 255, 0.12) !important;
+  border-color: rgba(255, 255, 255, 0.2) !important;
+  color: rgba(255, 255, 255, 0.72) !important;
+  box-shadow: none !important;
+}
+
+.btn-outline-light {
+  border-color: rgba(255, 255, 255, 0.28);
+}
+
+.btn-outline-light:hover,
+.btn-outline-light:focus,
+.btn-outline-light:active {
+  background: rgba(255, 255, 255, 0.16) !important;
+  border-color: rgba(255, 255, 255, 0.3) !important;
+  color: white !important;
+  box-shadow: none !important;
+}
+
+.btn-light {
+  background: rgba(255, 255, 255, 0.14);
+  border-color: rgba(255, 255, 255, 0.22);
+  color: white;
+}
+
+.btn-light:hover,
+.btn-light:focus,
+.btn-light:active {
+  background: rgba(255, 255, 255, 0.22) !important;
+  border-color: rgba(255, 255, 255, 0.28) !important;
+  color: white !important;
+  box-shadow: none !important;
+}
+
+.btn-outline-danger {
+  color: #ff6d7b;
+  border-color: #ff6d7b;
+  box-shadow: 0 0 0 1px rgba(255, 143, 154, 0.18), 0 0 12px rgba(220, 53, 69, 0.12);
+}
+
+main.container {
+  padding-top: 2rem;
+}
+
+.form-select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  padding-right: 2.75rem;
+  background-image:
+    linear-gradient(45deg, transparent 50%, rgba(255, 255, 255, 0.9) 50%),
+    linear-gradient(135deg, rgba(255, 255, 255, 0.9) 50%, transparent 50%);
+  background-position:
+    calc(100% - 18px) calc(50% - 3px),
+    calc(100% - 12px) calc(50% - 3px);
+  background-size: 6px 6px, 6px 6px;
+  background-repeat: no-repeat;
+}
+
+input[type='date'].form-control {
+  color-scheme: dark;
+  min-height: calc(1.5em + 0.75rem + 2px);
+}
+
+input[type='date'].form-control::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+  opacity: 0.9;
+  filter: invert(1) brightness(1.2);
+}
+
+input[type='date'].form-control::-webkit-datetime-edit,
+input[type='date'].form-control::-webkit-datetime-edit-text,
+input[type='date'].form-control::-webkit-datetime-edit-month-field,
+input[type='date'].form-control::-webkit-datetime-edit-day-field,
+input[type='date'].form-control::-webkit-datetime-edit-year-field {
+  color: white;
+}

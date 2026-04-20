@@ -1,0 +1,59 @@
+.nav-card {
+  border-radius: 18px;
+}
+
+.navbar-brand,
+.nav-link {
+  color: white;
+}
+
+.navbar-brand {
+  font-size: 1.05rem;
+}
+
+.nav-link {
+  border-radius: 10px;
+  padding-inline: 1rem;
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.nav-link.active,
+.nav-link:hover {
+  background: rgba(255, 255, 255, 0.14);
+  color: white;
+}
+
+.nav-link.active {
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.2);
+  font-weight: 600;
+}
+
+.navbar-toggler {
+  border-color: rgba(255, 255, 255, 0.25);
+}
+
+.navbar-collapse {
+  display: flex;
+  flex-basis: auto;
+}
+
+@media (max-width: 991.98px) {
+  .navbar-collapse {
+    display: none;
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  .navbar-collapse.menu-open {
+    display: block;
+  }
+
+  .navbar-nav {
+    gap: 0.5rem;
+  }
+
+  .nav-link {
+    display: block;
+    padding: 0.65rem 0.9rem;
+  }
+}

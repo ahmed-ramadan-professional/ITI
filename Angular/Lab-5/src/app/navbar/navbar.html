@@ -1,0 +1,24 @@
+<nav class="navbar navbar-expand-lg navbar-dark px-3 px-md-4 pt-4">
+  <div class="container custom-card nav-card py-3 px-3 px-md-4">
+    <a class="navbar-brand fw-semibold" routerLink="/home">Student Management System</a>
+
+    <button
+      class="navbar-toggler"
+      type="button"
+      aria-controls="mainNavbar"
+      [attr.aria-expanded]="isMenuOpen"
+      aria-label="Toggle navigation"
+      (click)="toggleMenu()"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="navbar-collapse" id="mainNavbar" [class.menu-open]="isMenuOpen">
+      <div class="navbar-nav ms-auto gap-lg-2">
+        <a class="nav-link" routerLink="/home" routerLinkActive="active" (click)="closeMenu()">Home</a>
+        <a class="nav-link" routerLink="/students" routerLinkActive="active" (click)="closeMenu()">Students</a>
+        <a class="nav-link" routerLink="/add-student" routerLinkActive="active" (click)="closeMenu()">Add Student</a>
+      </div>
+    </div>
+  </div>
+</nav>

@@ -1,0 +1,28 @@
+<section class="custom-card">
+  <div class="home-hero text-start mb-4">
+    <div class="hero-copy">
+      <p class="hero-label mb-2">Angular Lab 5</p>
+      <h1 class="mb-3">Student Management System</h1>
+      <p class="lead-text mb-0">
+        This project is a simple student management system built to practice routing, services,
+        observables, and component communication in Angular.
+      </p>
+    </div>
+  </div>
+
+  <div class="stats-grid text-start mb-4" *ngIf="stats$ | async as stats">
+    <div class="stat-box" *ngFor="let stat of stats">
+      <span class="stat-value">{{ stat.value }}</span>
+      <span class="stat-label">{{ stat.label }}</span>
+    </div>
+  </div>
+
+  <div class="home-footer d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center gap-3">
+    <div class="hero-actions d-flex flex-wrap gap-3">
+      <a class="btn btn-primary" routerLink="/students">View Students</a>
+      <a class="btn btn-outline-light" routerLink="/add-student">Add Student</a>
+    </div>
+
+    <p class="home-credit mb-0">Ahmed Ramadan</p>
+  </div>
+</section>

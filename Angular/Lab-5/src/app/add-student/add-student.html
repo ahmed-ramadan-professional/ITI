@@ -1,0 +1,219 @@
+<section class="custom-card">
+  <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-3 mb-4">
+    <div class="text-start">
+      <h1 class="mb-2">{{ isEditMode ? 'Edit Student' : 'Add Student' }}</h1>
+      <p class="section-subtitle mb-0">
+        {{ isEditMode ? 'Update the student data below, then save your changes.' : 'Fill in the data below, then save to add the student to the list.' }}
+      </p>
+    </div>
+    <a class="btn btn-outline-light" routerLink="/students">Back to Students</a>
+  </div>
+
+  <div class="alert alert-warning py-2" *ngIf="formSubmitted && studentFormRef.invalid">
+    Please complete the required fields before saving.
+  </div>
+
+  <form #studentFormRef="ngForm" (ngSubmit)="submitForm(studentFormRef)" class="row g-3 text-start" novalidate>
+    <div class="col-12">
+      <div class="form-section-title">Personal Information</div>
+    </div>
+
+    <div class="col-12 col-md-6">
+      <label for="firstName" class="form-label">First Name</label>
+      <input
+        id="firstName"
+        name="firstName"
+        type="text"
+        class="form-control"
+        #firstNameModel="ngModel"
+        [(ngModel)]="studentForm.firstName"
+        (blur)="trimField('firstName')"
+        required
+        minlength="2"
+        maxlength="20"
+        pattern="^[A-Za-z]+$"
+      />
+      <small class="field-error" *ngIf="shouldShowError(firstNameModel)">{{ getErrorMessage('First name', firstNameModel) }}</small>
+    </div>
+
+    <div class="col-12 col-md-6">
+      <label for="lastName" class="form-label">Last Name</label>
+      <input
+        id="lastName"
+        name="lastName"
+        type="text"
+        class="form-control"
+        #lastNameModel="ngModel"
+        [(ngModel)]="studentForm.lastName"
+        (blur)="trimField('lastName')"
+        required
+        minlength="2"
+        maxlength="20"
+        pattern="^[A-Za-z]+$"
+      />
+      <small class="field-error" *ngIf="shouldShowError(lastNameModel)">{{ getErrorMessage('Last name', lastNameModel) }}</small>
+    </div>
+
+    <div class="col-12 col-md-4">
+      <label for="age" class="form-label">Age</label>
+      <input id="age" name="age" type="number" class="form-control" #ageModel="ngModel" [(ngModel)]="studentForm.age" required min="16" max="60" />
+      <small class="field-error" *ngIf="shouldShowError(ageModel)">{{ getErrorMessage('Age', ageModel) }}</small>
+    </div>
+
+    <div class="col-12 col-md-4">
+      <label for="gender" class="form-label">Gender</label>
+      <app-custom-select id="gender" name="gender" [options]="genderOptions" [(ngModel)]="studentForm.gender"></app-custom-select>
+    </div>
+
+    <div class="col-12 col-md-4">
+      <label for="level" class="form-label">Level</label>
+      <input
+        id="level"
+        name="level"
+        type="number"
+        class="form-control"
+        #levelModel="ngModel"
+        [(ngModel)]="studentForm.level"
+        required
+        min="1"
+        max="4"
+      />
+      <small class="field-error" *ngIf="shouldShowError(levelModel)">{{ getErrorMessage('Level', levelModel) }}</small>
+    </div>
+
+    <div class="col-12 section-break">
+      <div class="form-section-title">Academic Information</div>
+    </div>
+
+    <div class="col-12 col-md-6">
+      <label for="department" class="form-label">Department</label>
+      <input
+        id="department"
+        name="department"
+        type="text"
+        class="form-control"
+        #departmentModel="ngModel"
+        [(ngModel)]="studentForm.department"
+        required
+        minlength="2"
+        maxlength="30"
+        pattern="^[A-Za-z]+(?:[ ][A-Za-z]+)*$"
+      />
+      <small class="field-error" *ngIf="shouldShowError(departmentModel)">{{ getErrorMessage('Department', departmentModel) }}</small>
+    </div>
+
+    <div class="col-12 col-md-6">
+      <label for="gpa" class="form-label">GPA</label>
+      <input id="gpa" name="gpa" type="number" step="0.1" class="form-control" #gpaModel="ngModel" [(ngModel)]="studentForm.gpa" required min="0" max="4" />
+      <small class="field-error" *ngIf="shouldShowError(gpaModel)">{{ getErrorMessage('GPA', gpaModel) }}</small>
+    </div>
+
+    <div class="col-12 col-md-6">
+      <label for="enrollmentDate" class="form-label">Enrollment Date</label>
+      <input
+        id="enrollmentDate"
+        name="enrollmentDate"
+        type="date"
+        class="form-control"
+        #enrollmentDateModel="ngModel"
+        [(ngModel)]="studentForm.enrollmentDate"
+        required
+        [max]="maxEnrollmentDate"
+      />
+      <small class="field-error" *ngIf="shouldShowError(enrollmentDateModel)">{{ getErrorMessage('Enrollment date', enrollmentDateModel) }}</small>
+    </div>
+
+    <div class="col-12 section-break">
+      <div class="form-section-title">Contact Information</div>
+    </div>
+
+    <div class="col-12 col-md-6">
+      <label for="email" class="form-label">Email</label>
+      <input
+        id="email"
+        name="email"
+        type="email"
+        class="form-control"
+        #emailModel="ngModel"
+        [(ngModel)]="studentForm.email"
+        required
+        maxlength="50"
+        pattern="^[^\s@]+@[^\s@]+\.[A-Za-z]{2,}$"
+      />
+      <small class="field-error" *ngIf="shouldShowError(emailModel)">{{ getErrorMessage('Email', emailModel) }}</small>
+    </div>
+
+    <div class="col-12 col-md-6">
+      <label for="phone" class="form-label">Phone</label>
+      <input
+        id="phone"
+        name="phone"
+        type="text"
+        class="form-control"
+        #phoneModel="ngModel"
+        [(ngModel)]="studentForm.phone"
+        required
+        pattern="^01[0125][0-9]{8}$"
+      />
+      <small class="field-error" *ngIf="shouldShowError(phoneModel)">{{ getErrorMessage('Phone', phoneModel) }}</small>
+    </div>
+
+    <div class="col-12 col-md-6">
+      <label for="city" class="form-label">City</label>
+      <input id="city" name="city" type="text" class="form-control" #cityModel="ngModel" [(ngModel)]="studentForm.city" required minlength="2" maxlength="25" pattern="^[A-Za-z]+(?:[ ][A-Za-z]+)*$" />
+      <small class="field-error" *ngIf="shouldShowError(cityModel)">{{ getErrorMessage('City', cityModel) }}</small>
+    </div>
+
+    <div class="col-12 col-md-6">
+      <label for="country" class="form-label">Country</label>
+      <input
+        id="country"
+        name="country"
+        type="text"
+        class="form-control"
+        #countryModel="ngModel"
+        [(ngModel)]="studentForm.country"
+        required
+        minlength="2"
+        maxlength="25"
+        pattern="^[A-Za-z]+(?:[ ][A-Za-z]+)*$"
+      />
+      <small class="field-error" *ngIf="shouldShowError(countryModel)">{{ getErrorMessage('Country', countryModel) }}</small>
+    </div>
+
+    <div class="col-12">
+      <label for="address" class="form-label">Address</label>
+      <input
+        id="address"
+        name="address"
+        type="text"
+        class="form-control"
+        #addressModel="ngModel"
+        [(ngModel)]="studentForm.address"
+        required
+        minlength="5"
+        maxlength="80"
+      />
+      <small class="field-error" *ngIf="shouldShowError(addressModel)">{{ getErrorMessage('Address', addressModel) }}</small>
+    </div>
+
+    <div class="col-12 col-md-6 d-flex align-items-end">
+      <div class="form-check mt-3">
+        <input
+          id="isActive"
+          name="isActive"
+          type="checkbox"
+          class="form-check-input"
+          [(ngModel)]="studentForm.isActive"
+        />
+        <label for="isActive" class="form-check-label">Active Student</label>
+      </div>
+    </div>
+
+    <div class="col-12 d-flex flex-wrap gap-3 action-bar">
+      <button type="submit" class="btn btn-primary action-submit">
+        {{ isEditMode ? 'Update Student' : 'Save Student' }}
+      </button>
+    </div>
+  </form>
+</section>
