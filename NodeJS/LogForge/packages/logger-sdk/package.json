@@ -1,0 +1,31 @@
+{
+  "name": "logforge-logger-sdk",
+  "version": "1.0.0",
+  "description": "Server SDK for sending logs to LogForge API",
+  "main": "src/index.js",
+  "type": "commonjs",
+  "exports": {
+    ".": "./src/index.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "files": [
+    "src"
+  ],
+  "scripts": {
+    "test": "vitest run",
+    "lint": "eslint src tests --ext .js",
+    "build": "echo \"sdk build step not required\""
+  },
+  "devDependencies": {
+    "vitest": "^4.1.7"
+  },
+  "keywords": [
+    "logging",
+    "sdk",
+    "express",
+    "monitoring"
+  ],
+  "license": "MIT"
+}

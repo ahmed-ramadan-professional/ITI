@@ -1,0 +1,14 @@
+{
+  "name": "@logforge/shared",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "type": "commonjs",
+  "scripts": {
+    "test": "vitest run",
+    "lint": "eslint src --ext .js",
+    "build": "echo \"shared package has no build step\""
+  },
+  "devDependencies": {
+    "vitest": "^4.1.7"
+  }
+}
